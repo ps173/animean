@@ -3,8 +3,8 @@ import styled from "styled-components/macro";
 export const Border = styled.div`
   width: 100%;
   height: 100%;
-  border-bottom: 5px solid grey;
-  box-shadow: 1px 0px 0px 0px grey;
+  border-bottom: 2px solid #242629;
+  box-shadow: 0px 0px 10px 0px #242629;
 `;
 
 export const Inner = styled.div`

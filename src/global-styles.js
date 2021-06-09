@@ -7,7 +7,5 @@ html, body{
     color:white;
 }
 
-h1{
-    color:#cb1111;
-}
+
 `;
