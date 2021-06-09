@@ -1,18 +1,23 @@
 import React from "react";
-import { Container, Title, SubTitle } from "./styles/header";
+import { Link as ReachRouterLink } from "react-router-dom";
+import { Container, ButtonLink, Logo } from "./styles/header";
 
-export default function Header({ children, direction = "row", ...restProps }) {
-  return <Container direction={direction}>{children}</Container>;
+export default function Header({ children, ...restProps }) {
+  return children;
 }
 
-Header.Title = function HeaderTitle({ children, ...restProps }) {
-  return <Title {...restProps}>{children}</Title>;
+Header.Frame = function HeaderFrame({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
 };
 
-Header.SubTitle = function HeaderSubtitle({ children, ...restProps }) {
-  return <SubTitle {...restProps}>{children}</SubTitle>;
+Header.Logo = function HeaderLogo({ to, ...restProps }) {
+  return (
+    <ReachRouterLink to={to}>
+      <Logo {...restProps} />
+    </ReachRouterLink>
+  );
 };
 
-Header.Links = function HeaderLinks({ children, ...restProps }) {
-  return <SubTitle {...restProps}>{children}</SubTitle>;
+Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
+  return <ButtonLink {...restProps}>{children}</ButtonLink>;
 };

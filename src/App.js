@@ -1,13 +1,18 @@
 import React from "react";
-import JumboContainer from "./containers/jumbotron";
-import Footer from "./containers/footer";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Home } from "./pages";
+import * as ROUTES from "./constants/routes";
 
 function App() {
   return (
-    <>
-      <JumboContainer />
-      <Footer />
-    </>
+    <Router>
+      <Route exact path={ROUTES.HOME}>
+        <Home />
+      </Route>
+      <Route exact path="/user">
+        <p> I am a user</p>
+      </Route>
+    </Router>
   );
 }
 
