@@ -17,7 +17,7 @@ export const Container = styled.div`
 
 export const ButtonLink = styled(ReachRouterLink)`
   display: block;
-  background-color: #e50914;
+  background-color: #C60476;
   width: 48px;
   height: fit-content;
   color: white;
@@ -28,12 +28,12 @@ export const ButtonLink = styled(ReachRouterLink)`
   cursor: pointer;
   text-decoration: none;
   &:hover {
-    background: #f40612;
+    background: #874CB2;
   }
 `;
 export const Logo = styled.img`
-  height: 36px;
-  width: 134px;
+  height: 56px;
+  width: 164px;
   margin-right: 40px;
   @media (min-width: 1449px) {
     height: 45px;

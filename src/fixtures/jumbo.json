@@ -1,25 +1,25 @@
 [
   {
     "id": 1,
-    "title": "Enjoy on your TV.",
-    "subTitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
-    "image": "https://i2.wp.com/tvrev.com/wp-content/uploads/2020/02/thibault-penin-AWOl7qqsffM-unsplash-scaled.jpg?fit=2560%2C1709&ssl=1",
-    "alt": "Netflix",
+    "title": "Get the Latest.",
+    "subTitle": "Latest animes availble for free. No cost because I get the anime from youtube so yeah no piracy",
+    "image": "/images/misc/BForBeginning.jpg",
+    "alt": "B: the beginning",
     "direction": "row"
   },
   {
     "id": 2,
-    "title": "Download your programmes to watch on the go.",
-    "subTitle": "Save your data and watch all your favourites offline.",
-    "image": "https://raw.githubusercontent.com/karlhadwen/netflix/master/public/images/misc/home-bg.jpg",
-    "alt": "Watch on mobile",
+    "title": "Totally Free. Yeah It doesn't cost shit",
+    "subTitle": "No price cause this is a fucking archive of animes availble on youtube. I just arrange them according to genre",
+    "image": "/images/misc/mtjbreca.jpg ",
+    "alt": "Mushkou Tensei",
     "direction": "row-reverse"
   },
   {
     "id": 3,
-    "title": "Watch everywhere.",
-    "subTitle": "Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.",
-    "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/05/MONEY-HEIST-SEASON-5.jpg",
+    "title": "Watch everywhere. Cause this on Internet",
+    "subTitle": "Yeah this is a fucking website and u cannot watch the stuff offline here ok don't fucking email me about random shit",
+    "image": "/images/misc/gobslayer.jpeg",
     "alt": "Money Heist on Netflix",
     "direction": "row"
   }
