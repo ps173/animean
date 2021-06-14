@@ -34,13 +34,20 @@ export const SubTitle = styled.h3`
 export const Panel = styled.div`
   margin: 2vw;
   width: 50%;
+
+  @media (max-width: 600px) {
+    margin: 1.5%;
+    width: 80%;
+  }
 `;
 
 export const Image = styled.img`
   height: auto;
   max-width: 100%;
 
-  @media (max-width: 1000px) {
-    display: none;
+  @media (max-width: 600px) {
+    position: relative;
+    max-width: 100%;
+    margin: 1.5%;
   }
 `;

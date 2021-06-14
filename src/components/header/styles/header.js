@@ -17,18 +17,19 @@ export const Container = styled.div`
 
 export const ButtonLink = styled(ReachRouterLink)`
   display: block;
-  background-color: #C60476;
-  width: 48px;
+  background-color: #c60476;
+  width: auto;
   height: fit-content;
   color: white;
   border: 0;
   font-size: 15px;
   border-radius: 3px;
-  padding: 8px 17px;
+  padding: 8px 20px;
+  padding-bottom: 10px;
   cursor: pointer;
   text-decoration: none;
   &:hover {
-    background: #874CB2;
+    background: #874cb2;
   }
 `;
 export const Logo = styled.img`

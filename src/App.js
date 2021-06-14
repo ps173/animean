@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, SignIn, Login } from "./pages";
 import * as ROUTES from "./constants/routes";
 
 function App() {
@@ -9,8 +9,11 @@ function App() {
       <Route exact path={ROUTES.HOME}>
         <Home />
       </Route>
-      <Route exact path="/user">
-        <p> I am a user</p>
+      <Route exact path={ROUTES.SIGN_UP}>
+        <SignIn />
+      </Route>
+      <Route exact path={ROUTES.LOGIN}>
+        <Login />
       </Route>
     </Router>
   );

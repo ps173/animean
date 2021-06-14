@@ -7,7 +7,7 @@ import HeaderFormContainer from "../containers/headerForm";
 export default function Home() {
   return (
     <div>
-      <HeaderContainer></HeaderContainer>
+      <HeaderContainer />
       <HeaderFormContainer />
       <JumboContainer />
       <Footer />
