@@ -10,18 +10,18 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path={ROUTES.SIGN_UP}>
+                <IsUserRedirect loggedInPath={ROUTES.BROWSE} user={user} path={ROUTES.SIGN_UP} exact >
                     <SignIn />
-                </Route>
-                <Route exact path={ROUTES.LOGIN}>
+                </IsUserRedirect>
+                <IsUserRedirect loggedInPath={ROUTES.BROWSE} user={user} path={ROUTES.LOGIN} exact >
                     <Login />
-                </Route>
+                </IsUserRedirect>
                 <Route exact path={ROUTES.HOME}>
                     <Home />
                 </Route>
-                <Route exact path={ROUTES.BROWSE}>
+                <ProtectedRoute user={user} pathname={ROUTES.SIGN_UP} exact path={ROUTES.BROWSE}>
                     <Browse />
-                </Route>
+                </ProtectedRoute>
             </Switch>
         </Router>
     );
