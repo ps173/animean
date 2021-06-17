@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home, SignIn, Login, Browse } from "./pages";
 import * as ROUTES from "./constants/routes";
 import { IsUserRedirect, ProtectedRoute } from "./helpers/Routes";
+import { useAuthListener } from "./hooks"
 
 function App() {
-    const user = null;
+    const { user } = useAuthListener();
+    console.log({ user })
 
     return (
         <Router>
