@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React from "react"
 import { Header, Banner } from "../components";
 import { firebase } from "../lib/firebase.prod.js";
 import * as ROUTES from "../constants/routes";
@@ -11,7 +11,7 @@ export function BrowseContainer({ user }) {
                 <Header.Frame>
                     <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
                     <Header.ProfileImage src={user.photoURL ? user.photoURL : "/images/misc/sample-profile.png"} />
-                    <Header.Button onClick={()=>{firebase.auth().signOut()}}> Logout </Header.Button>
+                    <Header.Button onClick={() => { firebase.auth().signOut() }}> Logout </Header.Button>
                 </Header.Frame>
             </Header>
             <Banner.Frame bg="url('/images/misc/Tokyo-Revengers.jpg')">

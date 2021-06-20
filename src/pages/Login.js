@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { HeaderContainer } from "../containers";
 import { FooterContainer } from "../containers";
 import { Form } from "../components";
-import { firebase } from "../lib/firebase.prod";
+import { firebase, provider } from "../lib/firebase.prod";
 import * as ROUTE from "../constants/routes";
 
 export default function Login() {
@@ -13,6 +13,19 @@ export default function Login() {
     const [error, setError] = useState("");
 
     const isInvalid = password === "" || email === "";
+
+    function googleAuthHandler() {
+
+        firebase.auth()
+            .signInWithPopup(provider)
+            .then((result) => {
+                console.log(result)
+            }).catch((error) => {
+                console.log(error)
+            });
+
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -51,6 +64,9 @@ export default function Login() {
                     />
                     <Form.Submit disabled={isInvalid} type="submit">
                         Login
+                    </Form.Submit>
+                    <Form.Submit onClick={googleAuthHandler}>
+                        Sign In with Google
                     </Form.Submit>
                 </Form.Base>
 
