@@ -1,16 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
+import FeatherIcon from 'feather-icons-react';
 import { Header, Banner } from "../components";
 import { firebase } from "../lib/firebase.prod.js";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.png";
 
 export function BrowseContainer({ user }) {
+    const [value, setValue] = useState("")
+
+    function handleChange(e) {
+        setValue(e.target.value)
+    }
+
     return (
         <>
             <Header>
                 <Header.Frame>
                     <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
-                    <Header.ProfileImage src={user.photoURL ? user.photoURL : "/images/misc/sample-profile.png"} />
+                    <Header.SearchBar value={value} handleChange={handleChange} />
+                    {user.photoURL ? <Header.ProfileImage src={user.photoURL} /> : <FeatherIcon icon="user" />}
                     <Header.Button onClick={() => { firebase.auth().signOut() }}> Logout </Header.Button>
                 </Header.Frame>
             </Header>

@@ -85,3 +85,36 @@ export const Button = styled.button`
 
 `;
 
+export const SearchContainer = styled.div`
+display: flex;
+align-items:center;
+justify-content:space-between;
+width: 150px;
+height: auto;
+padding: 1vh;
+`;
+
+export const SearchIcon = styled.button`
+  height: 26px;
+  width: 26px;
+  background-color: transparent;
+  border-radius: 20px;
+  color: white;
+  appearance: none;
+  outline : none;
+  border : none;
+`;
+
+export const SearchInput = styled.input`
+  height: 36px;
+  width: auto;
+  margin-right : 10%;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.2);
+  padding-left: 15%;
+  appearance: none;
+  outline : none;
+  border : none;
+  color:white;
+`;
+

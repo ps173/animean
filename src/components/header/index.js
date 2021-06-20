@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link as ReachRouterLink } from "react-router-dom";
-import { Container, ButtonLink, Logo, ProfileImage, Dropdown, Button } from "./styles/header";
+import { Container, ButtonLink, Logo, ProfileImage, Dropdown, Button, SearchContainer, SearchIcon, SearchInput } from "./styles/header";
+import FeatherIcon from 'feather-icons-react';
 
 export default function Header({ children }) {
     return children;
@@ -34,4 +35,14 @@ Header.Button = function HeaderButton({ children, ...restProps }) {
         <Button {...restProps} > {children} </Button>
     );
 };
+
+Header.SearchBar = function HeaderSearchBar({ value, handleChange, ...restProps }) {
+    return (
+        <SearchContainer {...restProps} >
+            <SearchInput placeholder="Search" onChange={handleChange} value={value} />
+            <SearchIcon > <FeatherIcon icon="search" /> </SearchIcon>
+        </SearchContainer>
+    );
+};
+
 
