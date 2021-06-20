@@ -7,7 +7,6 @@ import { useAuthListener } from "./hooks"
 
 function App() {
     const { user } = useAuthListener();
-    console.log({ user })
 
     return (
         <Router>
@@ -22,7 +21,7 @@ function App() {
                     <Home />
                 </Route>
                 <ProtectedRoute user={user} pathname={ROUTES.SIGN_UP} exact path={ROUTES.BROWSE}>
-                    <Browse />
+                    <Browse user={user} />
                 </ProtectedRoute>
             </Switch>
         </Router>
