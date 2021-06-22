@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link as ReachRouterLink } from "react-router-dom";
-import { Container, ButtonLink, Logo, ProfileImage, Dropdown, Button, SearchContainer, SearchIcon, SearchInput } from "./styles/header";
-import FeatherIcon from 'feather-icons-react';
+import {
+    Container,
+    ButtonLink,
+    Logo,
+    ProfileImage,
+    Button,
+    SearchContainer,
+    SearchIcon,
+    SearchInput,
+} from "./styles/header";
+import { FiSearch } from "react-icons/fi";
 
 export default function Header({ children }) {
     return children;
 }
-
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>;
@@ -25,24 +33,25 @@ Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
 };
 
 Header.ProfileImage = function HeaderProfileImage({ ...restProps }) {
-    return (
-        <ProfileImage {...restProps} />
-    );
+    return <ProfileImage {...restProps} />;
 };
 
 Header.Button = function HeaderButton({ children, ...restProps }) {
-    return (
-        <Button {...restProps} > {children} </Button>
-    );
+    return <Button {...restProps}> {children} </Button>;
 };
 
-Header.SearchBar = function HeaderSearchBar({ value, handleChange, ...restProps }) {
+Header.SearchBar = function HeaderSearchBar({
+    value,
+    handleChange,
+    ...restProps
+}) {
     return (
-        <SearchContainer {...restProps} >
+        <SearchContainer {...restProps}>
             <SearchInput placeholder="Search" onChange={handleChange} value={value} />
-            <SearchIcon > <FeatherIcon icon="search" /> </SearchIcon>
+            <SearchIcon>
+                {" "}
+                <FiSearch />{" "}
+            </SearchIcon>
         </SearchContainer>
     );
 };
-
-
