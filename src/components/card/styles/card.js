@@ -16,9 +16,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 85%;
   background-color: #4d4e4f50;
   transition: 0.3s;
+  margin-bottom: 10%;
 
   &:hover {
     background-color: #57575f80;
