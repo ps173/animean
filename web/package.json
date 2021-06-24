@@ -7,7 +7,6 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "dotenv": "^8.2.0",
-    "feather-icons-react": "^0.4.3",
     "firebase": "^8.6.5",
     "fuse.js": "^6.4.6",
     "normalize.css": "^8.0.1",
