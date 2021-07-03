@@ -48,7 +48,6 @@ export function BrowseContainer({ user, series }) {
           series.map((obj) => (
             <Card.Container key={obj.docId + obj.title}>
               <Card.Title>{obj.title}</Card.Title>
-              <Card.Image src="/images/misc/BForBeginning.jpg" />
               <Card.Text>{obj.description}</Card.Text>
               <Card.Button>Watch Now</Card.Button>
             </Card.Container>

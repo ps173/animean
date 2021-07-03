@@ -17,7 +17,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 85%;
-  background-color: #4d4e4f50;
+  background-color: #1e1e1f;
   transition: 0.3s;
   margin-bottom: 10%;
 
@@ -33,12 +33,12 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h1`
-  color: #e50f9d;
+  color: dodgerblue;
 `;
 
 export const Text = styled.p`
-  margin: auto;
-  padding: 5%;
+  padding: 2%;
+  padding-bottom: 5%;
   width: 90%;
   font-size: 1.2rem;
   overflow: hidden;
@@ -49,9 +49,9 @@ export const Button = styled.button`
   padding: 2%;
   margin-bottom: 5%;
   width: 30%;
-  height: 5%;
+  height: 10%;
   border-radius: 30px;
-  background-color: #b50e7d;
+  background-color: dodgerblue;
   color: white;
   outline: none;
   appearance: none;
